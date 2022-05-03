@@ -1,0 +1,51 @@
+tje_template_client_index:
+  path: clients
+  methods: [ GET ]
+  defaults:
+    _controller: 'PrestaShop\tje\Controller\Admin\ClientController::indexAction'
+    _legacy_controller: 'AdminTjeTemplate'
+    _legacy_link: 'AdminTjeTemplate'
+
+tje_template_client_search:
+  path: clients
+  methods: [ POST ]
+  defaults:
+    _controller: 'PrestaShop\tje\Controller\Admin\ClientController::searchAction'
+    _legacy_controller: 'AdminTjeTemplate'
+    _legacy_link: 'AdminTjeTemplate:search'
+
+tje_template_client_create:
+  path: clients/new
+  methods: [ GET, POST ]
+  defaults:
+    _controller: 'PrestaShop\tje\Controller\Admin\ClientController::createAction'
+    _legacy_controller: 'AdminTjeTemplate'
+    _legacy_link: 'AdminTjeTemplate:add'
+
+tje_template_client_edit:
+  path: clients/{clientId}/edit
+  methods: [ GET, POST ]
+  defaults:
+    _controller: 'PrestaShop\tje\Controller\Admin\ClientController::editAction'
+    _legacy_controller: 'AdminTjeTemplate'
+    _legacy_link: 'AdminTjeTemplate:update'
+  requirements:
+    quoteId: \d+
+
+tje_template_client_delete:
+  path: clients/{clientId}/delete
+  methods: [ DELETE ]
+  defaults:
+    _controller: 'PrestaShop\tje\Controller\Admin\ClientController::deleteAction'
+    _legacy_controller: 'AdminTjeTemplate'
+    _legacy_link: 'AdminTjeTemplate:deletequote'
+  requirements:
+    quoteId: \d+
+
+tje_template_client_bulk_delete:
+  path: clients/bulkDelete
+  methods: [ POST ]
+  defaults:
+    _controller: 'PrestaShop\tje\Controller\Admin\ClientController::deleteBulkAction'
+    _legacy_controller: 'AdminTjeTemplate'
+    _legacy_link: 'AdminTjeTemplate:submitBulkdeleteclient'

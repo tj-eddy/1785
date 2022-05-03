@@ -1,0 +1,22 @@
+{
+    "name": "prestashop/tje_template",
+    "license": "AFL-3.0",
+    "authors": [
+        {
+            "name": "Eddy",
+            "email": "rakoto.tje@gmail.com"
+        },
+        {
+            "name": "PrestaShop Core Team"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Prestashop\\tje\\": "src/"
+      },
+      "config": {
+        "prepend-autoloader": false
+      },
+      "type": "prestashop-module"
+    }
+}

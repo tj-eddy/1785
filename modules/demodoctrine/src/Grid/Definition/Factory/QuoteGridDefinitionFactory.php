@@ -110,7 +110,6 @@ class QuoteGridDefinitionFactory extends AbstractGridDefinitionFactory
             )
         ;
     }
-
     /**
      * {@inheritdoc}
      */
